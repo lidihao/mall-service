@@ -15,11 +15,8 @@
         <module>coupon-service</module>
         <module>user-service</module>
         <module>points-service</module>
-<<<<<<< HEAD
-=======
         <module>netty-websocket-sevice</module>
         <module>netty-gateway</module>
->>>>>>> dfcc465... 促销系统
     </modules>
 
     <properties>
