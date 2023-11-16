@@ -17,6 +17,7 @@
         <module>points-service</module>
         <module>netty-websocket-sevice</module>
         <module>netty-gateway</module>
+        <module>promotion-service-api</module>
     </modules>
 
     <properties>

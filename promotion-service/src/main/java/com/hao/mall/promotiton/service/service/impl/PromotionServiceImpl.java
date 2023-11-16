@@ -8,17 +8,18 @@ package com.hao.mall.promotiton.service.service.impl;
 
 import com.hao.mall.promotiton.service.constant.RedisConstant;
 import com.hao.mall.promotiton.service.dto.*;
-import com.hao.mall.promotiton.service.service.PromotionService;
+import com.hao.mall.promotiton.service.service.api.PromotionService;
 import com.hao.mall.promotiton.service.service.remote.MemberRemoteService;
-import org.springframework.data.redis.core.RedisTemplate;
+import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
+
+@DubboService
 @Service
 public class PromotionServiceImpl implements PromotionService {
 
@@ -29,7 +30,7 @@ public class PromotionServiceImpl implements PromotionService {
     private MemberRemoteService memberRemoteService;
 
 
-
+    @Override
     public PromotionCalculateRespDto calculatePromotion(PromotionCalculateReqDto promotionCalculateReqDto){
         //找出所有命中的规则
         MemberDto memberDto = memberRemoteService.getMemberDtoById(promotionCalculateReqDto.getMemberId());
